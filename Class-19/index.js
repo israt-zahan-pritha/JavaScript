@@ -85,10 +85,10 @@ if (isAdmin === false) {
 }
 //🙂🙂🙂🙂🙂🙂🙂
 //Find if the word "Enjoy" present in the new given sentence
-// let nature = "Hello, i always love to enjoy the beauty of nature";
-// let search = "Love";
-// let searchValue = nature.search(search);
-// console.log(searchValue);
+/*let nature = "Hello, i always love to enjoy the beauty of nature";
+let search = "Love";
+let searchValue = nature.search(search);
+console.log(searchValue);*/
 //🙂🙂🙂🙂🙂🙂🙂
 let nature = "Hello, i always love to enjoy the beauty of nature";
 let search = "aLwaYs";

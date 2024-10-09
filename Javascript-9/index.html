@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task List</title>
+  </head>
+  <style>
+    body {
+      text-align: center;
+      background-color: brown;
+      color: white;
+    }
+    input {
+      padding: 10px 20px;
+      font-size: 24px;
+    }
+    .form {
+      max-width: 500px;
+      margin: auto;
+      text-align: left;
+    }
+    li {
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .list {
+      margin-top: 10px;
+    }
+    .list-item {
+      padding: 0;
+      border: none;
+      background: transparent;
+    }
+  </style>
+  <body>
+    <h2>C(create) R(read) U(update) D(delete) Operation</h2>
+    <div class="form">
+      <form id="form" class="inputForm">
+        <input type="text" id="input" placeholder="Add a item👋" />
+        <input type="submit" value="Add Item" id="submit" />
+      </form>
+      <div id="bazar-list">
+        <div class="list"></div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
