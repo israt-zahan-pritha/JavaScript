@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cocktail Finder</title>
+    <!-- Include Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Main Container -->
+    <div class="container mx-auto p-4">
+      <h1 class="text-4xl font-bold text-center mb-8">Cocktail Finder</h1>
+
+      <!-- Search Bar -->
+      <input
+        id="search-bar"
+        type="text"
+        placeholder="Search for cocktails..."
+        class="w-full p-3 mb-6 border border-gray-300 rounded-lg"
+      />
+
+      <!-- Cocktail Cards Container -->
+      <div
+        id="cocktail-container"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      ></div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      id="cocktail-modal"
+      class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center hidden"
+    >
+      <div class="bg-white p-6 rounded-lg max-w-lg w-full relative">
+        <button
+          id="close-modal"
+          class="absolute top-2 right-2 text-red-600 text-xl"
+        >
+          &times;
+        </button>
+        <div id="modal-content" class="mt-4"></div>
+      </div>
+    </div>
+    <!-- Include JS File -->
+    <script defer src="script.js"></script>
+  </body>
+</html>

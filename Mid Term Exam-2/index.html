@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riotemplate</title>
+    <!-- Tailwind Css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesom Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Apply Roboto font to the entire body */
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header Section -->
+    <div class="bg-[#1a5eff] hover:bg-black">
+      <p
+        class="container max-w-screen-xl flex mx-auto w-full justify-center text-white text-1xl text-center pt-2 pb-2"
+      >
+        Accepting 4 new clients. <span>Get Started Now</span>
+      </p>
+    </div>
+
+    <header class="bg-[url('/img/Bg.svg')] bg-cover bg-no-repeat h-64">
+      <div
+        class="container max-w-screen-xl mx-auto px-4 py-4 flex justify-between items-center mb-28"
+      >
+        <div>
+          <img src="img/Rio.svg" alt="Bg Picture" />
+        </div>
+        <nav class="space-x-6">
+          <a href="#" class="text-black font-medium hover:text-[#1a5eff]"
+            >Home</a
+          >
+          <a href="#" class="text-black font-medium hover:text-[#1a5eff]"
+            >About Us</a
+          >
+          <a href="#" class="text-black font-medium hover:text-[#1a5eff]"
+            >Blog</a
+          >
+        </nav>
+        <div>
+          <button
+            class="bg-[#1a5eff] hover:bg-black text-white pt-3 pb-3 px-4 py-2 rounded-full"
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+      <!-- --------- -->
+      <div class="container max-w-screen-xl mx-auto px-4 text-center">
+        <h1 class="text-7xl font-bold mb-6">
+          Save time & <span class="text-[#1a5eff]">work smarter</span> <br />
+          with AI Automation
+        </h1>
+        <p class="text-xl mb-8">
+          We help you automate your workflows, automate repetitive <br />
+          tasks, and elevate your business.
+        </p>
+        <button
+          class="bg-[#1a5eff] hover:bg-black text-white pt-3 pb-3 px-4 py-2 mb-6 rounded-full"
+        >
+          Book Your Free Auide Call
+        </button>
+      </div>
+      <!-- ------------- -->
+      <!-- Happy Clients Section -->
+      <div class="flex justify-center items-center space-x-4">
+        <!-- Profile Images -->
+        <div class="flex -space-x-4">
+          <img
+            src="img/1.avif"
+            alt="Client 1"
+            class="w-12 h-12 rounded-full border-2 border-white"
+          />
+          <img
+            src="img/2.avif"
+            alt="Client 1"
+            class="w-12 h-12 rounded-full border-2 border-white"
+          />
+          <img
+            src="img/3.avif"
+            alt="Client 1"
+            class="w-12 h-12 rounded-full border-2 border-white"
+          />
+        </div>
+
+        <!-- Text -->
+        <div>
+          <p class="text-lg font-bold text-gray-800">200+ happy clients!</p>
+          <p class="text-gray-500">Join them now →</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Vedio Section Start -->
+    <div
+      class="relative mx-auto mt-96 md:mt-[450px] sm:mt-[500px]"
+      style="max-width: 1160px; aspect-ratio: 16/9"
+    >
+      <!-- Iframe for the YouTube video -->
+      <iframe
+        src="https://www.youtube.com/embed/QbFT7EnofZw?autoplay=1&controls=1"
+        frameborder="0"
+        allow="autoplay; fullscreen; encrypted-media; gyroscope; picture-in-picture"
+        class="w-full h-full"
+        id="videoIframe"
+      ></iframe>
+
+      <!-- Image overlay -->
+      <div
+        class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 z-10 cursor-pointer"
+        id="imageOverlay"
+        onclick="playVideo()"
+      >
+        <img
+          src="img/vedio-cover.webp"
+          alt="Overlay Image"
+          class="opacity-80"
+          style="max-width: 100%"
+        />
+      </div>
+    </div>
+    <!-- Services Section Strat-->
+    <div class="max-w-screen-xl mx-auto py-12 px-6">
+      <!-- Title Section -->
+      <div class="text-center mb-12">
+        <button
+          class="text-sm font-bold text-blue-600 uppercase p-2 rounded-lg bg-white"
+        >
+          Services
+        </button>
+        <h1 class="text-6xl font-bold text-gray-900 mt-2">
+          AI-powered <span class="text-blue-600">automation</span> <br />
+          services
+        </h1>
+      </div>
+
+      <!-- Cards Section -->
+      <div
+        class="container mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8"
+      >
+        <!-- Card 1 -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+        >
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+              <img
+                src="img/svgexport-9.svg"
+                alt="Chatbots for Internal Use"
+                class="w-6 h-6"
+              />
+            </div>
+            <h2 class="ml-4 text-xl font-semibold text-gray-800">
+              Chatbots for Internal Use
+            </h2>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Automate tasks to ensure your business operates seamlessly around
+            the clock.
+          </p>
+          <a
+            href="#"
+            class="text-blue-600 font-medium inline-flex items-center"
+          >
+            Learn more
+            <img src="img/svgexport-10.svg" alt="Arrow" class="ml-1 w-4 h-4" />
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+        >
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+              <img
+                src="img/svgexport-9.svg"
+                alt="Chatbots for Internal Use"
+                class="w-6 h-6"
+              />
+            </div>
+            <h2 class="ml-4 text-xl font-semibold text-gray-800">
+              Chatbots for Internal Use
+            </h2>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Automate tasks to ensure your business operates seamlessly around
+            the clock.
+          </p>
+          <a
+            href="#"
+            class="text-blue-600 font-medium inline-flex items-center"
+          >
+            Learn more
+            <img src="img/svgexport-10.svg" alt="Arrow" class="ml-1 w-4 h-4" />
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+        >
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+              <img
+                src="img/svgexport-10.svg"
+                alt="Workflow Automations"
+                class="w-6 h-6"
+              />
+            </div>
+            <h2 class="ml-4 text-xl font-semibold text-gray-800">
+              Workflow Automations
+            </h2>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Cut down on manual labor costs through efficient and precise
+            automated processes.
+          </p>
+          <a
+            href="#"
+            class="text-blue-600 font-medium inline-flex items-center"
+          >
+            Learn more
+            <img src="img/svgexport-10.svg" alt="Arrow" class="ml-1 w-4 h-4" />
+          </a>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+        >
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+              <img
+                src="img/svgexport-10.svg"
+                alt="Custom GPTs"
+                class="w-6 h-6"
+              />
+            </div>
+            <h2 class="ml-4 text-xl font-semibold text-gray-800">
+              Custom GPTs
+            </h2>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Harness the power of AI for in-depth analytics and informed
+            decision-making.
+          </p>
+          <a
+            href="#"
+            class="text-blue-600 font-medium inline-flex items-center"
+          >
+            Learn more
+            <img src="img/svgexport-10.svg" alt="Arrow" class="ml-1 w-4 h-4" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Services Section End-->
+
+    <!-- 2 Section Service Strat-->
+    <div
+      class="container max-w-screen-xl mx-auto py-16 px-6 lg:flex items-center"
+    >
+      <!-- Left Content Block -->
+      <div class="lg:w-1/2">
+        <button
+          class="text-sm font-bold text-blue-600 uppercase p-2 rounded-lg bg-white mb-4"
+        >
+          Content Block
+        </button>
+        <h1 class="text-5xl leading-[55px] font-bold text-gray-900 mb-6">
+          Workflows with our AI
+          <span class="text-blue-600">automation expertise</span>
+        </h1>
+        <p class="text-gray-600 mb-6">
+          Revolutionize tasks, reduce errors, and boost efficiency with
+          intelligent technology, streamlining operations for unparalleled
+          productivity.
+        </p>
+        <div>
+          <p class="mb-5">✔ Functional sections</p>
+          <p class="mb-5">✔ Easy to customize</p>
+        </div>
+        <!--Button -->
+        <button
+          class="inline-block bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-black transition"
+        >
+          Book Your Free Audit Call
+        </button>
+      </div>
+
+      <!-- Right Image Block -->
+      <div class="mt-12 lg:mt-0 lg:w-1/2 lg:flex lg:justify-end">
+        <!-- Example of an image, you can replace the src with your own image path -->
+        <img
+          src="img/4.avif"
+          alt="AI Automation Graph"
+          class="w-full max-w-md object-cover"
+        />
+      </div>
+    </div>
+    <!-- Two Service Section Start -->
+    <div
+      class="container max-w-screen-xl mx-auto px-6 py-16 flex flex-col lg:flex-row items-center space-y-12 lg:space-y-0 lg:space-x-12"
+    >
+      <!-- Left Section -->
+      <div class="w-full lg:w-1/2 flex justify-center">
+        <div class="relative">
+          <!-- Img-->
+          <div class="rounded-full border-4 border-blue-500 p-10">
+            <img src="img/5.avif" alt="img" class="w-48 h-48 mx-auto" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="w-full lg:w-1/2">
+        <!-- Content Block Label -->
+        <div class="mb-4">
+          <button
+            class="btext-sm font-bold text-blue-600 uppercase p-2 rounded-lg bg-white mb-4"
+          >
+            CONTENT BLOCK
+          </button>
+        </div>
+
+        <!-- Title -->
+        <h1 class="text-5xl leading-[58px] font-bold text-gray-800 mb-6">
+          Harnessing AI for <br />
+          business success
+        </h1>
+
+        <!-- Features -->
+        <div class="space-y-4">
+          <!-- Feature 1 -->
+          <div
+            class="bg-white shadow-md rounded-lg p-4 flex items-center justify-between"
+          >
+            <div class="flex items-center space-x-4">
+              <img
+                src="img/svgexport-14.svgs"
+                alt="List Icon"
+                class="w-8 h-8"
+              />
+              <p class="text-gray-700 font-medium">
+                Boost efficiency and cut costs with AI-powered automation
+              </p>
+            </div>
+            <a href="#" class="text-blue-600 text-xl">→</a>
+          </div>
+          <!-- Feature 2 -->
+          <div
+            class="bg-white shadow-md rounded-lg p-4 flex items-center justify-between"
+          >
+            <div class="flex items-center space-x-4">
+              <img
+                src="img/svgexport-15.svg"
+                alt="Automation Icon"
+                class="w-8 h-8"
+              />
+              <p class="text-gray-700 font-medium">
+                Optimize operations, minimize errors, and save resources
+              </p>
+            </div>
+            <a href="#" class="text-blue-600 text-xl">→</a>
+          </div>
+        </div>
+
+        <!-- Testimonial -->
+        <div class="mt-8">
+          <p class="text-gray-500 italic">
+            "Couldn't be happier with the work the guys from XYZ Agency did for
+            us. Made sales 10x more efficient."
+          </p>
+
+          <!-- CEO Info -->
+          <div class="flex items-center mt-4">
+            <img
+              src="img/7.avif"
+              alt="CEO Image"
+              class="w-12 h-12 rounded-full"
+            />
+            <div class="ml-3">
+              <p class="text-gray-800 font-semibold">William James</p>
+              <p class="text-gray-500 text-sm">CEO, XYZ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Price Section Start -->
+    <div class="text-center">
+      <h1 class="text-3xl font-bold">Plans to Fit Your Business</h1>
+      <div class="mt-4">
+        <button class="text-gray-600 font-semibold">Monthly</button>
+        <span class="mx-2">|</span>
+        <button class="text-gray-400">Yearly</button>
+      </div>
+    </div>
+    <section class="bg-gray-100 flex items-center justify-center mt-10 mb-36">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto">
+        <!-- Pro Plan -->
+        <div class="bg-white rounded-lg shadow-lg p-6 w-[380px] h-[560px]">
+          <h2 class="text-lg font-semibold">Pro</h2>
+          <p class="text-3xl font-bold my-4">
+            $199<span class="text-base font-normal">/m</span>
+          </p>
+          <p class="text-gray-500 mb-4">Price breakdown here</p>
+          <button
+            class="bg-blue-600 text-white px-6 py-2 rounded-full w-full font-semibold"
+          >
+            Get Started
+          </button>
+          <p class="text-sm text-gray-500 mt-4">
+            Got questions? Talk to an expert.
+          </p>
+          <ul class="mt-6 space-y-2">
+            <li>✔ Feature here</li>
+            <li>✔ Feature here</li>
+            <li>✔ Feature here</li>
+            <li>✔ Feature here</li>
+          </ul>
+          <button class="mt-6 text-blue-600 font-semibold">
+            Optional add-ons +
+          </button>
+        </div>
+
+        <!-- Pro Popular Plan -->
+        <div
+          class="bg-white rounded-lg shadow-lg p-6 relative w-[380px] h-[560px]"
+        >
+          <span
+            class="absolute top-0 right-0 bg-blue-600 text-white text-xs px-2 py-1 rounded-bl-lg"
+            >Popular</span
+          >
+          <h2 class="text-lg font-semibold">Pro</h2>
+          <p class="text-3xl font-bold my-4">
+            $599<span class="text-base font-normal">/m</span>
+          </p>
+          <p class="text-gray-500 mb-4">Price breakdown here</p>
+          <button
+            class="bg-blue-600 text-white px-6 py-2 rounded-full w-full font-semibold"
+          >
+            Get Started
+          </button>
+          <p class="text-sm text-gray-500 mt-4">
+            Got questions? Talk to an expert.
+          </p>
+          <ul class="mt-6 space-y-2">
+            <li>✔ Feature here</li>
+            <li>✔ Feature here</li>
+            <li>✔ Feature here</li>
+            <li>✔ Feature here</li>
+          </ul>
+          <button class="mt-6 text-blue-600 font-semibold">
+            Optional add-ons +
+          </button>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="bg-white rounded-lg shadow-lg p-6 w-[380px] h-[560px]">
+          <h2 class="text-lg font-semibold">Premium</h2>
+          <p class="text-3xl font-bold my-4">
+            $499<span class="text-base font-normal">/m</span>
+          </p>
+          <p class="text-gray-500 mb-4">Price breakdown here</p>
+          <button
+            class="bg-blue-600 text-white px-6 py-2 rounded-full w-full font-semibold"
+          >
+            Get Started
+          </button>
+          <p class="text-sm text-gray-500 mt-4">
+            Got questions? Talk to an expert.
+          </p>
+          <ul class="mt-6 space-y-2">
+            <li>✔ Feature here</li>
+            <li>✔ Feature here</li>
+            <li>✔ Feature here</li>
+            <li>✔ Feature here</li>
+          </ul>
+          <button class="mt-6 text-blue-600 font-semibold">
+            Optional add-ons +
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-12 rounded-t-lg">
+      <div class="max-w-7xl mx-auto text-center space-y-6">
+        <!-- Heading and CTA -->
+        <div>
+          <span
+            class="px-4 py-1 text-sm font-semibold text-gray-200 bg-gray-800 rounded-full"
+            >TESTIMONIALS</span
+          >
+          <h2 class="mt-4 text-3xl font-bold">
+            Ready to <span class="text-blue-500">Get Started?</span>
+          </h2>
+          <p class="mt-4 text-gray-300">
+            Experience the future of business operations with AI automation—
+            increased speed, accuracy, and adaptability, driving overall
+            productivity gains.
+          </p>
+          <a
+            href="#"
+            class="inline-block mt-6 px-6 py-3 text-lg font-semibold text-white bg-blue-500 rounded-full hover:bg-blue-600"
+          >
+            Book Your Free Audit Call
+          </a>
+        </div>
+
+        <!-- Social Icons with Font Awesome -->
+        <div class="flex justify-center space-x-4 mt-8">
+          <a href="#" class="text-gray-400 hover:text-gray-200">
+            <i class="fab fa-facebook fa-2x"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-200">
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-200">
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="flex justify-center space-x-8 mt-12 text-gray-400">
+          <a href="#" class="hover:text-gray-300">About</a>
+          <a href="#" class="hover:text-gray-300">Contact</a>
+          <a href="#" class="hover:text-gray-300">Blog</a>
+        </div>
+
+        <!-- Bottom Information -->
+        <div class="text-sm text-gray-500 mt-12">
+          <p>© Mont Limited 2023. All rights reserved.</p>
+          <p class="mt-2">Designed by Wize</p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
