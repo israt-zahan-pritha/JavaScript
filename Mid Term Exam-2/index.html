@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Riotemplate</title>
-    <!-- Tailwind Css -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesom Icon -->
     <link
       rel="stylesheet"
@@ -14,49 +12,77 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- Google Font -->
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <style>
-      /* Apply Roboto font to the entire body */
-      body {
-        font-family: "Inter", sans-serif;
-      }
-    </style>
+    <!-- Tailwind Css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+              cabinet: ["Cabinet", "sansserif"],
+              fonts: ["Fonts", "sans-serif"],
+              pxi: ["pxi", "sans-serif"],
+            },
+            backgroundImage: {
+              hero: "url('/img/BByKiThYR6TZVIEQlbwxH7IWUwY.svg')",
+              footer: "url('/img/JZuLriJ7TC7r3vitihu47GM.svg')",
+            },
+            boxShadow: {
+              box: "8px 8px 0px 0px rgba(255, 255, 255)",
+              boxone: "0 0 1rem rgba(0, 238, 255)",
+              "box-hover": "-8px -8px 0px 0px rgba(255, 255, 255)",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body class="bg-gray-100">
-    <!-- Header Section -->
-    <div class="bg-[#1a5eff] hover:bg-black">
+  <body class="bg-[#f6f6f7]">
+    <!-- Header Section Start -->
+    <div class="bg-[#1a5eff] hover:bg-black font-inter">
       <p
-        class="container max-w-screen-xl flex mx-auto w-full justify-center text-white text-1xl text-center pt-2 pb-2"
+        class="container max-w-screen-xl flex mx-auto w-full justify-center text-white text-sm font-normal text-center pt-2 pb-2"
       >
-        Accepting 4 new clients. <span>Get Started Now</span>
+        Accepting 4 new clients.
+        <span class="font-semibold">Get Started Now</span>
       </p>
     </div>
 
-    <header class="bg-[url('/img/Bg.svg')] bg-cover bg-no-repeat h-64">
+    <header class="bg-hero bg-cover bg-no-repeat h-64">
       <div
         class="container max-w-screen-xl mx-auto px-4 py-4 flex justify-between items-center mb-28"
       >
         <div>
           <img src="img/Rio.svg" alt="Bg Picture" />
         </div>
-        <nav class="space-x-6">
-          <a href="#" class="text-black font-medium hover:text-[#1a5eff]"
+        <nav class="space-x-6 font-cabinet">
+          <a
+            href="#"
+            class="text-black font-bold text-[18px] hover:text-[#1a5eff]"
             >Home</a
           >
-          <a href="#" class="text-black font-medium hover:text-[#1a5eff]"
+          <a
+            href="#"
+            class="text-black font-bold text-[18px] hover:text-[#1a5eff]"
             >About Us</a
           >
-          <a href="#" class="text-black font-medium hover:text-[#1a5eff]"
+          <a
+            href="#"
+            class="text-black font-bold text-[18px] hover:text-[#1a5eff]"
             >Blog</a
           >
         </nav>
         <div>
           <button
-            class="bg-[#1a5eff] hover:bg-black text-white pt-3 pb-3 px-4 py-2 rounded-full"
+            class="bg-[#1a5eff] hover:bg-black text-white font-cabinet pt-3 pb-3 px-4 py-2 rounded-full"
           >
             Get Started
           </button>
@@ -64,16 +90,16 @@
       </div>
       <!-- --------- -->
       <div class="container max-w-screen-xl mx-auto px-4 text-center">
-        <h1 class="text-7xl font-bold mb-6">
+        <h1 class="text-[80px] leading-[75px] font-cabinet font-bold mb-6">
           Save time & <span class="text-[#1a5eff]">work smarter</span> <br />
           with AI Automation
         </h1>
-        <p class="text-xl mb-8">
+        <p class="font-inter text-lg mb-8">
           We help you automate your workflows, automate repetitive <br />
           tasks, and elevate your business.
         </p>
         <button
-          class="bg-[#1a5eff] hover:bg-black text-white pt-3 pb-3 px-4 py-2 mb-6 rounded-full"
+          class="font-cabinet text-lg bg-[#1a5eff] hover:bg-black text-white pt-3 pb-3 px-4 py-2 mb-6 rounded-full"
         >
           Book Your Free Auide Call
         </button>
@@ -141,270 +167,188 @@
       <!-- Title Section -->
       <div class="text-center mb-12">
         <button
-          class="text-sm font-bold text-blue-600 uppercase p-2 rounded-lg bg-white"
+          class="font-inter text-base font-bold text-blue-600 uppercase p-2 rounded-lg bg-white"
         >
           Services
         </button>
-        <h1 class="text-6xl font-bold text-gray-900 mt-2">
+        <h1
+          class="text-[55px] leading-[50px] font-cabinet font-bold text-gray-900 mt-2"
+        >
           AI-powered <span class="text-blue-600">automation</span> <br />
           services
         </h1>
       </div>
 
-      <!-- Cards Section -->
+      <!-- Cards Section Start -->
       <div
         class="container mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8"
       >
-        <!-- Card 1 -->
-        <div
-          class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
-        >
-          <div class="flex items-center mb-4">
-            <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
-              <img
-                src="img/svgexport-9.svg"
-                alt="Chatbots for Internal Use"
-                class="w-6 h-6"
-              />
-            </div>
-            <h2 class="ml-4 text-xl font-semibold text-gray-800">
-              Chatbots for Internal Use
-            </h2>
-          </div>
-          <p class="text-gray-600 mb-4">
-            Automate tasks to ensure your business operates seamlessly around
-            the clock.
+        <!-- ----------- -->
+        <div class="rounded-3xl bg-white p-7">
+          <img src="img/download (9).svg" alt="" class="pb-6" />
+          <h1 class="text-[25px] font-cabinet font-bold">
+            Customer Support Chatbots
+          </h1>
+          <p class="text-[16px] font-normal font-inter py-3">
+            Streamline operations and enhance productivity with AI-driven
+            automation
           </p>
-          <a
-            href="#"
-            class="text-blue-600 font-medium inline-flex items-center"
-          >
+          <button class="text-[18px] font-semibold font-cabinet text-[#1a5eff]">
             Learn more
-            <img src="img/svgexport-10.svg" alt="Arrow" class="ml-1 w-4 h-4" />
-          </a>
+          </button>
         </div>
-
-        <!-- Card 2 -->
-        <div
-          class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
-        >
-          <div class="flex items-center mb-4">
-            <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
-              <img
-                src="img/svgexport-9.svg"
-                alt="Chatbots for Internal Use"
-                class="w-6 h-6"
-              />
-            </div>
-            <h2 class="ml-4 text-xl font-semibold text-gray-800">
-              Chatbots for Internal Use
-            </h2>
-          </div>
-          <p class="text-gray-600 mb-4">
-            Automate tasks to ensure your business operates seamlessly around
-            the clock.
-          </p>
-          <a
-            href="#"
-            class="text-blue-600 font-medium inline-flex items-center"
-          >
-            Learn more
-            <img src="img/svgexport-10.svg" alt="Arrow" class="ml-1 w-4 h-4" />
-          </a>
-        </div>
-
-        <!-- Card 3 -->
-        <div
-          class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
-        >
-          <div class="flex items-center mb-4">
-            <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
-              <img
-                src="img/svgexport-10.svg"
-                alt="Workflow Automations"
-                class="w-6 h-6"
-              />
-            </div>
-            <h2 class="ml-4 text-xl font-semibold text-gray-800">
-              Workflow Automations
-            </h2>
-          </div>
-          <p class="text-gray-600 mb-4">
+        <div class="rounded-3xl bg-white p-7">
+          <img src="img/download (8).svg" alt="" class="pb-6" />
+          <h1 class="text-[25px] font-cabinet font-bold">
+            Workflow Automations
+          </h1>
+          <p class="text-[16px] font-normal font-inter py-3">
             Cut down on manual labor costs through efficient and precise
             automated processes.
           </p>
-          <a
-            href="#"
-            class="text-blue-600 font-medium inline-flex items-center"
-          >
+          <button class="text-[18px] font-semibold font-cabinet text-[#1a5eff]">
             Learn more
-            <img src="img/svgexport-10.svg" alt="Arrow" class="ml-1 w-4 h-4" />
-          </a>
+          </button>
         </div>
 
-        <!-- Card 4 -->
-        <div
-          class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
-        >
-          <div class="flex items-center mb-4">
-            <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
-              <img
-                src="img/svgexport-10.svg"
-                alt="Custom GPTs"
-                class="w-6 h-6"
-              />
-            </div>
-            <h2 class="ml-4 text-xl font-semibold text-gray-800">
-              Custom GPTs
-            </h2>
-          </div>
-          <p class="text-gray-600 mb-4">
+        <!-- ---------------- -->
+
+        <div class="rounded-3xl bg-white p-7">
+          <img src="img/download (7).svg" alt="" class="pb-6" />
+          <h1 class="text-[25px] font-cabinet font-bold">
+            Chatbots for Internal Use
+          </h1>
+          <p class="text-[16px] font-normal font-inter py-3">
+            Automate tasks to ensure your business operates seamlessly around
+          </p>
+          <button class="text-[18px] font-semibold font-cabinet text-[#1a5eff]">
+            Learn more
+          </button>
+          <img src="img/svgexport-8.svg" alt=" Picture" />
+        </div>
+        <div class="rounded-3xl bg-white p-7">
+          <img src="img/download (6).svg" alt="" class="pb-6" />
+          <h1 class="text-[25px] font-cabinet font-bold">Custom GPTs</h1>
+          <p class="text-[16px] font-normal font-inter py-3">
             Harness the power of AI for in-depth analytics and informed
             decision-making.
           </p>
-          <a
-            href="#"
-            class="text-blue-600 font-medium inline-flex items-center"
-          >
+          <button class="text-[18px] font-semibold font-cabinet text-[#1a5eff]">
             Learn more
-            <img src="img/svgexport-10.svg" alt="Arrow" class="ml-1 w-4 h-4" />
-          </a>
+          </button>
         </div>
+        <!-- ---------- -->
       </div>
+      <!-- Cards Section End -->
     </div>
     <!-- Services Section End-->
 
     <!-- 2 Section Service Strat-->
-    <div
-      class="container max-w-screen-xl mx-auto py-16 px-6 lg:flex items-center"
-    >
-      <!-- Left Content Block -->
-      <div class="lg:w-1/2">
-        <button
-          class="text-sm font-bold text-blue-600 uppercase p-2 rounded-lg bg-white mb-4"
-        >
-          Content Block
-        </button>
-        <h1 class="text-5xl leading-[55px] font-bold text-gray-900 mb-6">
-          Workflows with our AI
-          <span class="text-blue-600">automation expertise</span>
-        </h1>
-        <p class="text-gray-600 mb-6">
-          Revolutionize tasks, reduce errors, and boost efficiency with
-          intelligent technology, streamlining operations for unparalleled
-          productivity.
-        </p>
-        <div>
-          <p class="mb-5">✔ Functional sections</p>
-          <p class="mb-5">✔ Easy to customize</p>
-        </div>
-        <!--Button -->
-        <button
-          class="inline-block bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-black transition"
-        >
-          Book Your Free Audit Call
-        </button>
-      </div>
-
-      <!-- Right Image Block -->
-      <div class="mt-12 lg:mt-0 lg:w-1/2 lg:flex lg:justify-end">
-        <!-- Example of an image, you can replace the src with your own image path -->
-        <img
-          src="img/4.avif"
-          alt="AI Automation Graph"
-          class="w-full max-w-md object-cover"
-        />
-      </div>
-    </div>
-    <!-- Two Service Section Start -->
-    <div
-      class="container max-w-screen-xl mx-auto px-6 py-16 flex flex-col lg:flex-row items-center space-y-12 lg:space-y-0 lg:space-x-12"
-    >
-      <!-- Left Section -->
-      <div class="w-full lg:w-1/2 flex justify-center">
-        <div class="relative">
-          <!-- Img-->
-          <div class="rounded-full border-4 border-blue-500 p-10">
-            <img src="img/5.avif" alt="img" class="w-48 h-48 mx-auto" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Section -->
-      <div class="w-full lg:w-1/2">
-        <!-- Content Block Label -->
-        <div class="mb-4">
-          <button
-            class="btext-sm font-bold text-blue-600 uppercase p-2 rounded-lg bg-white mb-4"
+    <section>
+      <div
+        class="max-w-[1200px] mx-auto px-4 flex gap-5 flex-col-reverse md:flex md:flex-row items-center"
+      >
+        <div data-aos="fade-up">
+          <a
+            href="#"
+            class="font-cabinet text-sm font-bold text-blue-600 uppercase p-2 rounded-md bg-white mb-4"
+            >Content block</a
           >
-            CONTENT BLOCK
+          <h1
+            class="text-[51px] text-black font-semibold max-w-[700px] leading-[55px] pt-5"
+          >
+            Workflows with our AI automation
+            <span class="text-[#1a5eff]">expertise</span>
+          </h1>
+          <p class="text-[18px] font-normal py-5">
+            Revolutionize tasks, reduce errors, and boost efficiency with
+            intelligent technology, streamlining operations for unparalleled
+            productivity
+          </p>
+          <div class="flex gap-2 pb-4 mt-3">
+            <img src="img/download (10).svg" alt="Picture" />
+            <h1 class="text-[18px] font-medium">Functional sections</h1>
+          </div>
+          <div class="flex gap-2 pb-4 mb-5">
+            <img src="img/download (10).svg" alt="Picture" />
+            <h1 class="text-[18px] font-medium">Functional sections</h1>
+          </div>
+          <button
+            class="bg-[#1a5eff] rounded-3xl py-3 px-6 text-white font-normal font-cabinet hover:bg-black transition ease-out duration-500"
+          >
+            Book Your Free Audit Call
           </button>
         </div>
-
-        <!-- Title -->
-        <h1 class="text-5xl leading-[58px] font-bold text-gray-800 mb-6">
-          Harnessing AI for <br />
-          business success
-        </h1>
-
-        <!-- Features -->
-        <div class="space-y-4">
-          <!-- Feature 1 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex items-center justify-between"
-          >
-            <div class="flex items-center space-x-4">
-              <img
-                src="img/svgexport-14.svgs"
-                alt="List Icon"
-                class="w-8 h-8"
-              />
-              <p class="text-gray-700 font-medium">
-                Boost efficiency and cut costs with AI-powered automation
-              </p>
-            </div>
-            <a href="#" class="text-blue-600 text-xl">→</a>
-          </div>
-          <!-- Feature 2 -->
-          <div
-            class="bg-white shadow-md rounded-lg p-4 flex items-center justify-between"
-          >
-            <div class="flex items-center space-x-4">
-              <img
-                src="img/svgexport-15.svg"
-                alt="Automation Icon"
-                class="w-8 h-8"
-              />
-              <p class="text-gray-700 font-medium">
-                Optimize operations, minimize errors, and save resources
-              </p>
-            </div>
-            <a href="#" class="text-blue-600 text-xl">→</a>
-          </div>
-        </div>
-
-        <!-- Testimonial -->
-        <div class="mt-8">
-          <p class="text-gray-500 italic">
-            "Couldn't be happier with the work the guys from XYZ Agency did for
-            us. Made sales 10x more efficient."
-          </p>
-
-          <!-- CEO Info -->
-          <div class="flex items-center mt-4">
-            <img
-              src="img/7.avif"
-              alt="CEO Image"
-              class="w-12 h-12 rounded-full"
-            />
-            <div class="ml-3">
-              <p class="text-gray-800 font-semibold">William James</p>
-              <p class="text-gray-500 text-sm">CEO, XYZ</p>
-            </div>
-          </div>
+        <div data-aos="fade-up">
+          <img src="img/4.avif" alt="Picture" />
         </div>
       </div>
-    </div>
+    </section>
+    <!-- 2 Section section end  -->
+    <!-- Two Service Section Start -->
+    <section class="pt-36 pb-28">
+      <div
+        class="max-w-[1200px] mx-auto px-4 flex gap-11 flex-col md:flex md:flex-row items-center"
+      >
+        <div data-aos="fade-up">
+          <img src="img/5.avif" alt="Picture" />
+        </div>
+        <div data-aos="fade-up">
+          <a
+            href="#"
+            class="font-cabinet uppercase py-2 px-4 bg-white rounded-md"
+            >Content block</a
+          >
+          <h1
+            class="text-[51px] text-black font-semibold max-w-[700px] leading-[50px] pt-5"
+          >
+            Harnessing AI for business success
+          </h1>
+          <div
+            class="flex gap-5 border border-[#e5e5e7] p-2 rounded-lg mb-4 mt-6 transition ease-out duration-500"
+          >
+            <div class="bg-white p-2 rounded-xl">
+              <img src="img/download (11).svg" alt="" class="w-10" />
+            </div>
+            <h1 class="text-[18px] font-medium hover:text-white">
+              Boost efficiency and cut costs with AI-powered automation
+            </h1>
+          </div>
+          <div
+            class="flex gap-5 border border-[#e5e5e7] p-2 rounded-lg transition ease-out duration-500"
+          >
+            <div class="bg-white p-2 rounded-xl">
+              <img src="img/download (12).svg" alt="" class="w-10" />
+            </div>
+            <h1 class="text-[18px] font-medium">
+              Optimize operations, minimize errors, and save resources
+            </h1>
+          </div>
+
+          <p class="text-[18px] font-normal py-5">
+            “Couldn’t be happier with the work the guys from XYZ Agency did for
+            us. Made sales 10x more efficient.”
+          </p>
+          <div class="flex gap-3 pb-4">
+            <img
+              src="img/7.avif"
+              alt="Picture"
+              class="w-14 h-14 rounded-full object-cover"
+            />
+            <div>
+              <p class="font-inter font-medium text-[18px]">William James</p>
+              <p class="text-[16px]">CEO, XYZ</p>
+            </div>
+          </div>
+          <button
+            class="bg-primery-color rounded-3xl py-3 px-6 text-white font-normal font-cabinet hover:bg-black transition ease-out duration-500"
+          >
+            Book Your Free Audit Call
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Two Service Section End -->
     <!-- Price Section Start -->
     <div class="text-center">
       <h1 class="text-3xl font-bold">Plans to Fit Your Business</h1>

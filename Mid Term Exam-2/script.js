@@ -1,3 +1,13 @@
+module.exports = {
+  theme: {
+    extend: {
+      backgroundImage: {
+        "header-bg": "url('/img/Bg.svg')",
+      },
+    },
+  },
+};
+
 function playVideo() {
   // Hide the overlay when clicked
   document.getElementById("imageOverlay").style.display = "none";
