@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Nav</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-HDRrjsFPZLpzCaiPxQvNS07aaZK7YQJQEMI1jUzhjPPewysXe5GScHQRihKlCJZWb3foeM1oxwbAnP5LjX9lRg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Tailwind Css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              lato: ["Lato", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-lato">
+    <section
+      class="container max-w-[900px] mx-auto h-full flex justify-center items-center"
+    >
+      <div
+        class="accordion max-w-[700px] mx-auto p-4 bg-black text-white rounded-lg overflow-hidden"
+      >
+        <div class="accordion-title flex justify-between items-center">
+          <h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            enim eligendi, esse, necessitatibus rem iure quaerat similique
+            laudantium quibusdam odit reprehenderit cum numquam quia? Inventore
+            ipsa doloribus minima similique perspiciatis?
+          </h2>
+          <div class="icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="open-icon w-8 text-white cursor-pointer transition-all duration-500 ease-in-out transform hover:rotate-180"
+            >
+              <path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path>
+            </svg>
+            <span
+              class="close-icon w-[30px] inline-block h-1 bg-white hidden cursor-pointer"
+            ></span>
+          </div>
+        </div>
+        <!-- ----- -->
+        <div
+          class="accordion-content mt-8 p-4 border border-solid border-green-500 rounded-lg hidden"
+        >
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+            dolores, nostrum ut alias cum delectus quos ipsum, tenetur
+            temporibus at numquam natus consectetur voluptates ex autem
+            excepturi eius minima? Deleniti.
+          </p>
+        </div>
+      </div>
+    </section>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Nav</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-HDRrjsFPZLpzCaiPxQvNS07aaZK7YQJQEMI1jUzhjPPewysXe5GScHQRihKlCJZWb3foeM1oxwbAnP5LjX9lRg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Tailwind Css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              lato: ["Lato", "sans-serif"],
+            },
+            colors: {
+              "black-300": "rgba(122, 122, 122, 0.8)",
+              "black-500": "rgba(58, 58, 58, 0.8)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="max-w-screen-xl mx-auto font-lato">
+    <!-- Header Section Start -->
+    <header>
+      <div
+        class="max-w-screen-xl p-4 bg-red-300 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div><h2>Adventures</h2></div>
+        <!-- Desktop Menu -->
+        <nav id="nav" class="hidden gap-6 md:flex cursor-pointer">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Service</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Contact</a>
+        </nav>
+        <!-- humburger -->
+        <div class="sm:flex md:hidden" id="humburger">
+          <svg
+            class="w-8 cursor-pointer menu-open"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+          </svg>
+          <!-- Menu Icon Close -->
+          <svg
+            class="w-8 cursor-pointer hidden menu-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M6.45455 19L2 22.5V4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V18C22 18.5523 21.5523 19 21 19H6.45455ZM13.4142 11L15.8891 8.52513L14.4749 7.11091L12 9.58579L9.52513 7.11091L8.11091 8.52513L10.5858 11L8.11091 13.4749L9.52513 14.8891L12 12.4142L14.4749 14.8891L15.8891 13.4749L13.4142 11Z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <!-- Logo -->
+      <div
+        class="p-3 w-2/3 h-full fixed top-0 left-[-100%] bg-black transition-all duration-500 ease-in"
+        id="mobile-menu"
+      >
+        <h2 class="text-xl mb-4 text-white" id="logo">Adventures</h2>
+        <!-- Menu -->
+        <nav class="flex flex-col gap-8 text-base text-white">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Service</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Contact</a>
+        </nav>
+        <!-- Social Icon  -->
+        <div class="flex gap-4 mt-4">
+          <i class="fa-brands fa-twitter h-8 w-8 bg-sky text-white"></i>
+          <i class="fa-brands fa-facebook h-8 w-8 bg-sky text-white"></i>
+          <i class="fa-brands fa-linkedin h-8 w-8 bg-sky text-white"></i>
+        </div>
+      </div>
+    </header>
+    <!-- Header Section End -->
+    <!-- Modal Section Start -->
+    <section class="offer grid place-content-center h-[70vh]">
+      <button
+        id="btn"
+        class="btn px-8 py-4 bg-black text-white text-xl cursor-pointer"
+      >
+        Open Modal
+      </button>
+      <div
+        id="modal"
+        class="modal w-full h-full fixed top-0 left-0 bg-black-300 bg-opacity-80 flex justify-center items-center hidden"
+      >
+        <div
+          class="modal-content max-w-[600px] flex flex-col bg-white border-4 border-red-500"
+        >
+          <img
+            src="https://media3.giphy.com/media/QjHxYa6rtOJAZ1nmPw/giphy.gif"
+            alt="Gif"
+          />
+          <div class="content p-8 flex flex-col gap-8 text-center">
+            <h2>Use Cuppon</h2>
+            <h3 class="text-2xl">CODE100XW</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Modal Section End -->
+    <script src="./app.js"></script>
+  </body>
+</html>
