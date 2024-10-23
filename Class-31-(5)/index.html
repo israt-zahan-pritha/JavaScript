@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Build Color Picker</title>
+    <!-- Tailwind Css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              Roboto: ["Roboto", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-Roboto box-border bg-gray-800">
+    <div class="container mx-auto text-center">
+      <h1 class="text-white text-4xl mt-16">Search For Your Meal🔍</h1>
+      <div
+        class="bg-white w-1/2 mx-auto p-2 mt-5 border rounded-xl flex justify-between gap-2"
+      >
+        <input
+          type="text"
+          placeholder="Ex---"
+          class="p-4 w-full rounded-xl border-transparent"
+          id="input"
+        />
+        <button
+          id="search"
+          class="btn bg-orange-500 hover:bg-orange-700 text-white px-4 py-2 rounded"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+    <!-- ---Meal Results Container--- -->
+    <div
+      class="container mx-auto border border-gray-600 h-[600px] rounded-xl mt-5 p-4"
+    >
+      <h2
+        id="noMeal"
+        class="text-gray-300 text-center text-4xl mt-16 font-semibold capitalize"
+      >
+        No Meal to Show!😑
+      </h2>
+      <div class="meal-wrapper grid grid-cols-4 gap-5">
+        <!-- <div class="meal-box border border-gray-500 rounded-xl">
+          <img
+            src="1.jpg"
+            alt="Picture"
+            class="rounded h-[200px] w-full object-cover"
+          />
+          <div class="p-3">
+            <h3 class="heading">Lablebi Soup</h3>
+            <p class="text-gray-400 my-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              totam vero dolorum natus explicabo eveniet maiores similique
+              necessitatibus, autem distinctio rerum impedit ut eos doloremque
+              provident? Eos delectus iusto asperiores?
+            </p>
+            <p class="italic text-gray-500">
+              <span>Tunisian</span><span>Vegetarial</span>
+            </p>
+            <div class="my-4">
+              <a
+                href="#"
+                class="btn bg-orange-500 hover:bg-orange-700 text-white px-4 py-2 rounded"
+                >Watch</a
+              >
+              <button class="px-3 text-white">View Recipe</button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <!-- --Popup Container ---- -->
+    <div>
+      <div class="flex items-center justify-center min-h-screen">
+        <div
+          id="details"
+          class="overlay fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 invisible"
+        >
+          <!-- <div class="popup bg-white w-[70%] min-h-[500px] p-10">
+            <h2 class="text-2xl font-bold mb-4">Popup Title</h2>
+            <p class="mb-6">Popup Content goes here</p>
+            <button
+              class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded"
+            >
+              Close
+            </button>
+          </div> -->
+          <!-- Popup content will be injected here -->
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
