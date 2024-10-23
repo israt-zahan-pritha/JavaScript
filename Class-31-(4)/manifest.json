@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "ColorPicup",
+  "description": "A Color picker tool to pick Color from any website.",
+  "version": "1.0",
+  "author": "Israt Zahan",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "1.png",
+    "default_title": "Color Picup"
+  },
+  "permissions": ["scripting", "activeTab", "tabs", "storage"]
+}
