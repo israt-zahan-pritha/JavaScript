@@ -1,45 +1,89 @@
-let allLinks = [];
-const input = document.getElementById("input");
-const tabBtn = document.getElementById("tab-btn");
-const inputBtn = document.getElementById("input-btn");
-const deleteBtn = document.getElementById("delete-btn");
-const list = document.getElementById("list");
+// TODO : Select all selectors - done
+// TODO : Make pick color btn functional - done
+// TODO : Make copy color functional - done
+// TODO : Show color on the DOM - done
+// TODO : Local Storage - done
+// TODO : Clear button to clear all the previous colors - done
 
-let getLinksFromLocalStorage = JSON.parse(localStorage.getItem("links"));
+// Selectors
+const colorPickerBtn = document.getElementById("color-picker");
+const clearAll = document.querySelector(".clear-all");
+const colorList = document.querySelector(".all-colors");
+// let pickedColors = [];
+// Step 5
+let pickedColors = JSON.parse(localStorage.getItem("picked-colors") || "[]");
 
-if (getLinksFromLocalStorage) {
-  allLinks = getLinksFromLocalStorage;
-  renderArr(allLinks);
-}
-function renderArr(arr) {
-  list.innerHTML = "";
-  arr.forEach((item) => {
-    list.innerHTML += ` 
-    <li><a href="${item}" class="link" target="_blank">${item}</a></li>
-`;
-  });
-}
-inputBtn.addEventListener("click", () => {
-  let links = input.value;
-  allLinks.push(links);
-  input.value = "";
-  localStorage.setItem("links", JSON.stringify(allLinks));
-  renderArr(allLinks);
-});
+// Step 01
+const activateEyeDropper = async () => {
+  try {
+    const eyeDropper = new EyeDropper();
+    console.log(eyeDropper);
+    // const test = eyeDropper.open();
+    // console.log(test);
+    const colorCode = await eyeDropper.open();
+    console.log(colorCode.sRGBHex);
+    // copy to clipboard
+    navigator.clipboard.writeText(colorCode.sRGBHex);
+    // sending the new color code to the array
+    pickedColors.push(colorCode.sRGBHex);
+    showColor();
+    // Step 4
+    localStorage.setItem("picked-colors", JSON.stringify(pickedColors));
+    // console.log(pickedColors);
+  } catch (error) {
+    alert("Failed");
+  }
+};
 
-deleteBtn.addEventListener("click", () => {
-  localStorage.clear();
-  allLinks = [];
-  renderArr(allLinks);
-});
+// Step 02
+const showColor = () => {
+  if (pickedColors.length > 0) {
+    document.querySelector(".picked-colors").style.display = "block";
+    colorList.innerHTML = pickedColors
+      .map(
+        (color) => `
+        <li class="color">
+          <span class="rect" style="background-color:${color}"></span>
+          <span class="value hex">${color}</span>
+        </li>
+        `
+      )
+      .join("");
 
-tabBtn.addEventListener("click", () => {
-  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    // since only one tab should be active and in the current window at once
-    // the return variable should only have one entry
-    var activeTab = tabs[0].url;
-    allLinks.push(activeTab);
-    localStorage.setItem("links", JSON.stringify(allLinks));
-    renderArr(allLinks);
-  });
-});
+    // Step 07 (Copy Color)
+    let colors = document.querySelectorAll(".color");
+    console.log(colors);
+    colors.forEach((li) => {
+      li.addEventListener("click", (e) => {
+        let color = e.target.innerText;
+        navigator.clipboard.writeText(color);
+        e.target.innerText = "Copied";
+
+        // set color to the initial stage
+        setTimeout(() => (e.target.innerText = color), 1000);
+      });
+    });
+  } else {
+    document.querySelector(".picked-colors").style.display = "none";
+    //colorList.innerHTML = "<li>No Color Found</li>";
+  }
+};
+
+// Step 03
+const clearListOfColors = () => {
+  // colorList.innerHTML = "";
+
+  // Step 06
+  pickedColors.length = 0;
+  localStorage.setItem("picked-colors", JSON.stringify(pickedColors));
+  document.querySelector(".picked-colors").style.display = "none";
+};
+
+// activate color picker
+colorPickerBtn.addEventListener("click", activateEyeDropper);
+
+// call clear function
+clearAll.addEventListener("click", clearListOfColors);
+
+// show color by default
+showColor();
